@@ -1,0 +1,28 @@
+<mat-card class="card-container">
+    <mat-card-header>
+        <img loading="lazy" mat-card-avatar src="https://i0.hippopx.com/photos/697/887/581/finland-wooden-chalet-reeds-forest-lake-preview.jpg" alt="Forest">
+        <mat-card-title>
+            <span *ngIf="!isEditing">{{username}}</span>
+            <input [value]="username" (change)="username = $event.target.value" type="text" placeholder="Name" *ngIf="isEditing">
+        </mat-card-title>
+        <mat-card-subtitle>
+            <span *ngIf="!isEditing">{{profession}}</span>
+            <input [value]="profession" (change)="profession = $event.target.value" type="text" placeholder="Profession" *ngIf="isEditing">
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p *ngIf="!isEditing">{{bio}}</p>
+        <textarea [value]="bio" (change)="bio = $event.target.value" type="text" placeholder="Bio" *ngIf="isEditing"></textarea>
+    </mat-card-content>
+    <mat-card-actions>
+        <button (click)="edit()" mat-icon-button aria-label="edit">
+            <mat-icon>edit</mat-icon>
+          </button>
+        <button (click)="delete()" mat-icon-button aria-label="delete">
+            <mat-icon>delete</mat-icon>
+          </button>
+        <button (click)="save()" mat-icon-button aria-label="save">
+            <mat-icon>save</mat-icon>
+          </button>
+    </mat-card-actions>
+</mat-card>

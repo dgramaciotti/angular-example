@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Roboto, sans-serif;
+}
+
+mat-icon {
+    transition: all 0.3s;
+}
+
+button {
+    background: none;
+    border: none;
+    transition: all 0.3s;
+    &:hover {
+        background: #fff;
+        mat-icon {
+            color: #000;
+        }
+    }
+}
+
+input {
+    font-family: Roboto, sans-serif;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+    &:hover {
+        opacity: 0.8;
+    }
+}
